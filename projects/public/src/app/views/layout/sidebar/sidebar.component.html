@@ -1,0 +1,40 @@
+<!-- ========== Left Sidebar Start ========== -->
+
+<ng-template #contentTemplate>
+  <!--- Sidemenu -->
+  <div id="sidebar-menu">
+    <!-- Left Menu Start -->
+    <ul class="metismenu list-unstyled" id="side-menu" #sideMenu>
+      <!-- {{menuItems}} -->
+
+      <ng-container>
+        <li>
+          <a
+            routerlinkactive="active"
+            class="side-nav-link-ref"
+            routerLink="users-approval"
+          >
+            <i class="bx bx-user"></i>
+            <span> Users Approval</span>
+          </a>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</ng-template>
+<!-- Sidebar -->
+
+<div class="vertical-menu">
+  <ngx-simplebar class="h-100" #componentRef>
+    <div *ngIf="!isCondensed">
+      <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    </div>
+  </ngx-simplebar>
+  <!-- <div>
+        <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    </div> -->
+  <!-- <div>
+        <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    </div> -->
+</div>
+<!-- Left Sidebar End-->
