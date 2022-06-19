@@ -11,8 +11,10 @@ usersList: any[] = [];
 
   ngOnInit(): void {
     this._userService.getUsersList().subscribe(res => {
-      this.usersList = res.result 
-      console.log(this.usersList)
+      console.log(res)
+
+      this.usersList = res.data.result ;
+           console.log(this.usersList)
     }
       )
     
